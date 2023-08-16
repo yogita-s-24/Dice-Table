@@ -1,0 +1,106 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Kanit:wght@300;400&family=Poppins:wght@100;200;300;500&family=Roboto+Mono:wght@100;200;300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*{
+    font-family: 'poppins', monospace;
+    background: #C9D6FF;
+    background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);
+    background: linear-gradient(to right, #E2E2E2, #C9D6FF);
+}
+h1{
+    text-align: center;
+    font-size: 50px;    
+}
+.default-img{
+    height: 150px;
+    display: block;
+    margin: 0 auto;
+    background: transparent;
+    transform: rotateZ(50deg);
+    animation: three 2s ;
+    animation-direction: alternate;     
+}
+.button{
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    font-family: 'Kanit', sans-serif;
+    padding: 1em;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #2c9caf;
+    transition: all 250ms;
+    font-size: 12px;
+    position: relative;
+    overflow: hidden;
+    outline: 2px solid #2c9caf;
+    cursor: pointer;     
+}
+button:hover{
+    color: black;
+    transform: scale(1.1);
+    outline: 2px solid #70bdca;
+    box-shadow: 4px 5px 17px -4px #268391; 
+}
+.play-cards{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 70px;
+
+}
+.card{
+    height: 250px;
+    width: 150px;
+    border: none;
+    border-radius: 10px;
+   
+}
+.card{
+            
+    float: left;
+    perspective: 500px;
+
+}
+
+
+.content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.flip{
+    transform: rotateY( 180deg ) ;
+    transition: transform 0.5s;
+}
+
+.front,
+.back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: white;
+    border-radius: 10px;
+    color: #03446A;
+    text-align: center;
+    font-size: 60px;
+    backface-visibility: hidden;
+}
+
+.back {
+    font-size: 20px;
+    padding: 5px;
+    background: #03446A;
+    color: white;
+    transform: rotateY( 180deg );
+    
+}
+.card-no{
+    background: transparent;
+}
